@@ -79,22 +79,19 @@ int common(int **a, int Alen, int **b, int Blen,int *indexArray)
 	for (i = 0, j = 0; i < Alen && j < Blen;)
 	{
 		value = checkForSameDate(a,i,b,j);
-		printf("\ni=%dj=%d,value=%d\n",i,j,value);
+		
 		if (value == 0)
 		{
-			printf("**value0= %d \n",i);
+			
 			indexArray[k++] = i;
 			i++; j++;
 		}
 		else if (value == 1)
 		{
-			printf("** value1=%d \n", i);
-
 			i++;
 		}
 		else if (value == 2)
 		{
-			printf("** value2=%d \n", i);
 			j++;
 		}
 	}
@@ -143,7 +140,7 @@ struct transaction * sortedArraysCommonElements(struct transaction *A, int ALen,
 		}
 		commonArray = (int *)malloc(20 * sizeof(int));
 		commonLength=common(a, ALen, b, BLen,commonArray);
-		printf("k=%d",commonLength);
+		
 		if (commonLength == 0)
 			return NULL;
 		else
@@ -152,10 +149,9 @@ struct transaction * sortedArraysCommonElements(struct transaction *A, int ALen,
 			for (i = 0; i < commonLength; i++)
 			{
 				A[i] = A[commonArray[i]];
-				printf("\namount=%d", A[i].amount);
+			
 			}
-			A = (struct transaction *)realloc(A, commonLength*sizeof(struct transaction));
-			return A;
+		return A;
 		}
 
 	}
