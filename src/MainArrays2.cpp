@@ -15,6 +15,11 @@ Objectives of C-Arrays-2 Lesson:
 */
 #include <stdio.h>
 #include "FunctionHeadersArrays2.h"
+struct transaction {
+	int amount;
+	char date[11];
+	char description[20];
+};
 
 int main(){
 
@@ -26,5 +31,7 @@ int main(){
 
 	//Test sortedArraysCommonElements
 
+	struct transaction Arr[5] = { { 60, "09-10-2003", "First" }, { 70, "19-10-2004", "Second" }, { 30, "03-03-2005", "Third" }, { 90, "21-05-2006", "Fourth" }, { 10, "29-11-2007", "Fifth" } };
+	int count = countGreaterNumbers(Arr, 5, "03-03-2005");
 	return 0;
 }
