@@ -31,7 +31,11 @@ int main(){
 
 	//Test sortedArraysCommonElements
 
-	struct transaction Arr[5] = { { 60, "09-10-2003", "First" }, { 70, "19-10-2004", "Second" }, { 30, "03-03-2005", "Third" }, { 90, "21-05-2006", "Fourth" }, { 10, "29-11-2007", "Fifth" } };
-	int count = countGreaterNumbers(Arr, 5, "03-03-2005");
+	
+		struct transaction A[3] = { { 10, "09-10-2003", "First" }, { 20, "21-10-2006", "Second" }, { 30, "03-03-2005", "Third" } };
+		struct transaction B[3] = { { 40, "21-10-2006", "Fourth" }, { 50, "13-11-2007", "Fifth" }, { 60, "13-08-2008", "Sixth" } };
+		//int A[3] = { 1, 2, 3 }, B[3] = { 4, 5, 6 };
+		struct transaction *result = sortedArraysCommonElements(A, 3, B, 3);
+
 	return 0;
 }

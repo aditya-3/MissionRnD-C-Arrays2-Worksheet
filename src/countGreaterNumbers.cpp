@@ -114,5 +114,6 @@ int countGreaterNumbers(struct transaction *Arr, int len, char *date) {
 	}
 	t = check(a,inputDate,len);
 	printf("\ncount=%d",t);
+	
 	return t;
 }
