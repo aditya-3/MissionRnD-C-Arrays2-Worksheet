@@ -154,7 +154,7 @@ struct transaction * sortedArraysCommonElements(struct transaction *A, int ALen,
 				A[i] = A[commonArray[i]];
 				printf("\namount=%d", A[i].amount);
 			}
-			//A = realloc(A, commonLength*sizeof(struct transaction));
+			A = (struct transaction *)realloc(A, commonLength*sizeof(struct transaction));
 			return A;
 		}
 
