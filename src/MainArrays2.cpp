@@ -14,6 +14,7 @@ Objectives of C-Arrays-2 Lesson:
 
 */
 #include <stdio.h>
+#include<stdlib.h>
 #include "FunctionHeadersArrays2.h"
 struct transaction {
 	int amount;
@@ -32,10 +33,11 @@ int main(){
 	//Test sortedArraysCommonElements
 
 	
-		struct transaction A[3] = { { 10, "09-10-2003", "First" }, { 20, "21-10-2006", "Second" }, { 30, "03-03-2005", "Third" } };
-		struct transaction B[3] = { { 40, "21-10-2006", "Fourth" }, { 50, "13-11-2007", "Fifth" }, { 60, "13-08-2008", "Sixth" } };
-		//int A[3] = { 1, 2, 3 }, B[3] = { 4, 5, 6 };
-		struct transaction *result = sortedArraysCommonElements(A, 3, B, 3);
-
+	printf("main\n");
+	
+	struct transaction A[3] = { { 10, "09-10-2003", "First" }, { 20, "19-10-2004", "Second" }, { 30, "03-03-2005", "Third" } };
+	struct transaction B[3] = { { 10, "09-10-2003", "First" }, { 20, "19-10-2004", "Second" }, { 30, "03-03-2005", "Third" } };
+	//int A[3] = { 1, 2, 3 }, B[3] = { 1, 2, 3 };
+	struct transaction *result = mergeSortedArrays(A, 3, B, 3);
 	return 0;
 }
