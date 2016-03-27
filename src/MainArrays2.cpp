@@ -33,11 +33,7 @@ int main(){
 	//Test sortedArraysCommonElements
 
 	
-	printf("main\n");
-	
-	struct transaction A[3] = { { 10, "09-10-2003", "First" }, { 20, "19-10-2004", "Second" }, { 30, "03-03-2005", "Third" } };
-	struct transaction B[3] = { { 10, "09-10-2003", "First" }, { 20, "19-10-2004", "Second" }, { 30, "03-03-2005", "Third" } };
-	//int A[3] = { 1, 2, 3 }, B[3] = { 1, 2, 3 };
-	struct transaction *result = mergeSortedArrays(A, 3, B, 3);
+	int A[10] = { 12, 1, 122, 3, 122, 1, 1, 122, 3, 3 };
+	int k = findSingleOccurenceNumber(A, 10);
 	return 0;
 }
